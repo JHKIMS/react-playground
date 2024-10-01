@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background: linear-gradient(to right, #16222a, #3a6073);
+}
+
 .container{
   margin: auto;
   max-width: 600px;

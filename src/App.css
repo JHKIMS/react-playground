@@ -2,19 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background: linear-gradient(to right, #16222a, #3a6073);
-}
+/* 
+  body{
+    background: linear-gradient(to right, #16222a, #3a6073);
+  }
 
-.container{
-  margin: auto;
-  max-width: 600px;
-}
+  .container{
+    margin: auto;
+    max-width: 600px;
+  }
 
-.todoBlock {
-  padding: 30px;
-  margin-top: 50px;
-  background: aliceblue;
-  border-radius: 10px;
-  box-shadow: -9px 17px 13px rgb(0 0 0 / 16%);
-}
+  .todoBlock {
+    padding: 30px;
+    margin-top: 50px;
+    background: aliceblue;
+    border-radius: 10px;
+    box-shadow: -9px 17px 13px rgb(0 0 0 / 16%);
+  } 
+*/

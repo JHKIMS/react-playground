@@ -3,9 +3,11 @@ import "./App.css";
 import Form from "./Component/Form";
 import Lists from "./Component/Lists";
 
+const initialTodoData = localStorage.getItem("todoData") ? JSON.parse(localStorage.getItem("todoData")) : [];
+
 function App() {
   console.log("App Rendering");
-  const [todoData, setTodoData] = useState([]);
+  const [todoData, setTodoData] = useState(initialTodoData);
   
   const [value, setValue] = useState("");
   const handleSubmit = (e) => {
@@ -17,17 +19,20 @@ function App() {
       completed: false,
     };
     setTodoData((prev) => [...prev, newTodo]);
+    localStorage.setItem('todoData', JSON.stringify([...todoData, newTodo]));
+
     setValue("");
   };
 
   const handleClick = useCallback((id) => {
     let newTodoData = todoData.filter((data) => data.id !== id);
-    console.log(newTodoData, todoData);
     setTodoData(newTodoData);
+    localStorage.setItem('todoData', JSON.stringify(newTodoData));
   },[todoData]);
 
   const handleRemoveClick = () => {
     setTodoData([]);
+    localStorage.setItem('todoData', JSON.stringify([]));
   }
   return (
     <div className="flex items-center justify-center w-screen h-screen bg-gradient-to-r from-[#16222a] to-[#3a6073]">

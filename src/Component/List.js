@@ -2,7 +2,7 @@ import React from "react";
 
 const List = React.memo(({
     // @ts-ignore
-    id, title, completed, todoData, setTodoData, provided, snapshot
+    id, title, completed, todoData, setTodoData, provided, snapshot, handleClick
 }) => {
   console.log("List Rendering");
   
@@ -16,11 +16,7 @@ const List = React.memo(({
     setTodoData(newTodoData);
   };
 
-  const handleClick = (id) => {
-    let newTodoData = todoData.filter((data) => data.id !== id);
-    console.log(newTodoData, todoData);
-    setTodoData(newTodoData);
-  };
+
   return (
     <div
       key={id}

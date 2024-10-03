@@ -4,6 +4,7 @@ import Form from "./Component/Form";
 import Lists from "./Component/Lists";
 
 function App() {
+  console.log("App Rendering");
   const [todoData, setTodoData] = useState([]);
   
   const [value, setValue] = useState("");

@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 export default function Form({value, setValue, handleSubmit}) {
   
   const handleChange = (e) => {

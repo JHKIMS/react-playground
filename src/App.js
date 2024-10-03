@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Form from "./Component/Form";
-import List from "./Component/List";
+import Lists from "./Component/Lists";
 
 function App() {
   const [todoData, setTodoData] = useState([]);
@@ -24,7 +24,7 @@ function App() {
         <div className="flex justify-between mb-3">
           <h1>Todo List</h1>
         </div>
-        <List todoData={todoData} setTodoData={setTodoData}/>
+        <Lists todoData={todoData} setTodoData={setTodoData}/>
         <Form value={value} setValue={setValue} handleSubmit={handleSubmit}/>
       </div>
     </div>
